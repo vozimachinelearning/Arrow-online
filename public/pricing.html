@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Arrow | Affordable Desktop Automation</title>
+  <meta name="description" content="Arrow pricing: $10 for the first month, then $2/month for support. No per-token charges, no hidden fees, no telemetry. Enterprise plans available with 24/7 support." />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Arrow logo" />
+        <span>Arrow</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-tabs" id="navTabs">
+        <a href="/" class="tab-btn">Home</a>
+        <a href="/features" class="tab-btn">Features</a>
+        <a href="/pricing" class="tab-btn active">Pricing</a>
+        <a href="/download" class="tab-btn">Download</a>
+        <a href="/docs" class="tab-btn">Docs</a>
+        <a href="/support" class="tab-btn">Support</a>
+        <a href="/about" class="tab-btn">About</a>
+        <a href="/contact" class="tab-btn">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Pricing Content -->
+    <div id="tab-pricing" class="tab-content active">
+      <section class="section" style="border-top:none;padding-top:48px;">
+        <div class="section-label">Pricing</div>
+        <h2>Fair pricing. No per-token charges. No hidden fees.</h2>
+        <p class="subtitle">Choose the plan that fits your needs. Both tiers include all features.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <h3>Individual / Community</h3>
+            <div class="pricing-amount"><span class="price">Free</span><span class="period">first month</span></div>
+            <p class="pricing-desc">Then <strong>$10</strong> first paid month, then just <strong>$2/month</strong> after for support. All features included. Zero telemetry. New license key each month.</p>
+            <ul class="pricing-features">
+              <li>&#10003; All 14 node types</li>
+              <li>&#10003; Local AI inference (Ollama + llama.cpp)</li>
+              <li>&#10003; Multimodal vision &amp; OCR</li>
+              <li>&#10003; Visual workflow editor</li>
+              <li>&#10003; Built-in scheduler</li>
+              <li>&#10003; RDP sandbox execution</li>
+              <li>&#10003; Agent mode chat interface</li>
+              <li>&#10003; Monthly license key (no telemetry)</li>
+            </ul>
+            <a href="#" class="btn btn-primary pricing-btn" onclick="openSubscribeModal(); return false;">Get Started Free &rarr;</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <div class="pricing-amount"><span class="price">Custom</span></div>
+            <p class="pricing-desc">Everything in Individual plus premium support and advanced features.</p>
+            <ul class="pricing-features">
+              <li>&#10003; All Individual features</li>
+              <li>&#10003; 24/7 priority support</li>
+              <li>&#10003; Custom chain creation</li>
+              <li>&#10003; SLA guarantees</li>
+              <li>&#10003; WAN cluster processing</li>
+              <li>&#10003; Dedicated onboarding</li>
+              <li>&#10003; Custom integration support</li>
+              <li>&#10003; Volume licensing</li>
+            </ul>
+            <a href="/contact" class="btn btn-secondary pricing-btn">Contact Sales &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Feature Comparison</div>
+        <h2>See exactly what you get</h2>
+        <p class="subtitle">No surprise upsells — every plan includes the full platform.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Feature</th><th>Individual</th><th>Enterprise</th></tr></thead>
+            <tbody>
+              <tr><td>All automation features</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>14 node types</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>Local AI inference</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>Multimodal vision</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>Scheduling</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>RDP sandboxing</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>Zero telemetry</td><td class="highlight">&#10003;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>24/7 support</td><td class="muted">&mdash;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>Custom chain creation</td><td class="muted">&mdash;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>SLA guarantees</td><td class="muted">&mdash;</td><td class="highlight">&#10003;</td></tr>
+              <tr><td>WAN cluster processing</td><td class="muted">&mdash;</td><td class="highlight">&#10003;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Subscription Modal -->
+    <div class="modal-overlay" id="subscribeModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeSubscribeModal()">&times;</button>
+        <h3>Start Your Free Month</h3>
+        <p class="modal-subtitle">Free first month &bull; $10 second month &bull; $2/month after</p>
+
+        <form id="subscribeForm">
+          <input type="hidden" name="_subject" value="New Arrow Subscription">
+          <input type="hidden" name="form_type" value="subscription">
+
+          <div class="form-group">
+            <label for="subName">Full Name</label>
+            <input type="text" id="subName" name="name" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="subEmail">Email Address</label>
+            <input type="email" id="subEmail" name="email" class="form-input" placeholder="you@example.com" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary pricing-btn" id="subBtn">
+            Start Free Month &rarr;
+          </button>
+        </form>
+
+        <div id="subSuccess" style="display:none;">
+          <div class="form-success">
+            <h3>Thanks, {{name}}!</h3>
+            <p>We'll send a PayPal invoice to your email within 24 hours. Your free month starts once you confirm!</p>
+          </div>
+        </div>
+
+        <p class="modal-note">No credit card required. Cancel anytime.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Arrow (formerly LoOper) &mdash; The On-Device Agent Creation &amp; Automation Platform<br />
+      <span class="footer-tagline">No cloud. No telemetry. No compromise.</span>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

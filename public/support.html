@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Arrow | Help Center & FAQ</title>
+  <meta name="description" content="Arrow support: FAQ, community forum, troubleshooting guides, and enterprise support options." />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Arrow logo" />
+        <span>Arrow</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-tabs" id="navTabs">
+        <a href="/" class="tab-btn">Home</a>
+        <a href="/features" class="tab-btn">Features</a>
+        <a href="/pricing" class="tab-btn">Pricing</a>
+        <a href="/download" class="tab-btn">Download</a>
+        <a href="/docs" class="tab-btn">Docs</a>
+        <a href="/support" class="tab-btn active">Support</a>
+        <a href="/about" class="tab-btn">About</a>
+        <a href="/contact" class="tab-btn">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Support Content -->
+    <div id="tab-support" class="tab-content active">
+      <section class="section" style="border-top:none;padding-top:48px;">
+        <div class="section-label">Help Center</div>
+        <h2>We're here to help</h2>
+        <p class="subtitle">Find answers, get support, or join the community.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Frequently Asked Questions</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">How much does Arrow cost for individuals? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Arrow is <strong>not free</strong> for individuals. It's a flat <strong>$10/month</strong> — $10 for the first month, then just <strong>$2/month</strong> after that for ongoing support. Since Arrow does not collect telemetry, a new license key is issued each month to validate your subscription. No per-token charges, no execution limits, no feature gating.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Does Arrow require an internet connection? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">No. Arrow runs 100% offline. All AI inference, automation execution, and license validation happen on your device. The only time internet is needed is for downloading models and updates.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What AI models does Arrow support? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Arrow supports two inference backends: Ollama (for pull-based model management) and llama.cpp (for direct GGUF model execution). Five models are bundled, including SmolLM3 for routing, LFM for reasoning, and vision models for screen understanding.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I use Arrow for commercial purposes? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">The Individual tier is for personal use. Organizations requiring commercial use, 24/7 support, SLA guarantees, and custom integration should contact us about the Enterprise tier.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Does Arrow collect any telemetry? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Zero. Arrow collects no telemetry, usage data, or analytics. Your data, workflows, and automations remain entirely on your device. Because we don't collect telemetry, a new license key is generated each month to verify your subscription — keeping things simple and private.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How does the license key work? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Since Arrow does not collect telemetry, we use monthly license keys to verify your subscription instead. Pay <strong>$10</strong> for your first month to receive your initial key. Each subsequent month is <strong>$2</strong> for support, and a new key is issued automatically. No auto-renewal — you choose to renew each month.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How do I upgrade to Enterprise? <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Contact our sales team through the Contact tab. Enterprise licenses include 24/7 support, custom chains, SLA guarantees, and WAN cluster processing.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Support Options</div>
+        <div class="grid grid-wide">
+          <div class="card support-card">
+            <h3>Discord Community</h3>
+            <p>Connect with other Arrow users, share workflows, ask questions, get help, and stay up to date with the latest releases and announcements.</p>
+            <a href="https://discord.gg/znfXBSQbP" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:16px;">Join Discord &rarr;</a>
+          </div>
+          <div class="card support-card">
+            <h3>Documentation</h3>
+            <p>Comprehensive guides and API references for all Arrow features.</p>
+            <a href="/docs" class="btn btn-secondary" style="margin-top:16px;">View Docs &rarr;</a>
+          </div>
+          <div class="card support-card">
+            <h3>Enterprise Support</h3>
+            <p>24/7 priority support for Enterprise customers with dedicated engineers.</p>
+            <a href="/contact" class="btn btn-secondary" style="margin-top:16px;">Contact Support &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Troubleshooting</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">Arrow won't start after installation <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Ensure your system meets the minimum requirements (Windows 10 22H2+, 8GB RAM, 5GB free space). Try reinstalling the MSI. If the issue persists, check the log files at <code>%LOCALAPPDATA%\Arrow\logs</code>.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Models fail to download <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Ensure you have a stable internet connection for the initial download. Models are downloaded from Hugging Face. If downloads fail, restart Arrow — it will resume where it left off.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">License validation errors <span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Arrow uses hardware-bound license validation. If your hardware changes significantly, you may need to reinstall your license. Contact support for assistance with license recovery.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Arrow (formerly LoOper) &mdash; The On-Device Agent Creation &amp; Automation Platform<br />
+      <span class="footer-tagline">No cloud. No telemetry. No compromise.</span>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — Arrow | On-Device Agent Creation & Automation</title>
+  <meta name="description" content="Explore Arrow's full platform capabilities: desktop recording, AI inference, visual workflow editor, scheduling, and more — all offline." />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Arrow logo" />
+        <span>Arrow</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-tabs" id="navTabs">
+        <a href="/" class="tab-btn">Home</a>
+        <a href="/features" class="tab-btn active">Features</a>
+        <a href="/pricing" class="tab-btn">Pricing</a>
+        <a href="/download" class="tab-btn">Download</a>
+        <a href="/docs" class="tab-btn">Docs</a>
+        <a href="/support" class="tab-btn">Support</a>
+        <a href="/about" class="tab-btn">About</a>
+        <a href="/contact" class="tab-btn">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Features Content -->
+    <div id="tab-features" class="tab-content active">
+      <section class="section" style="border-top:none;padding-top:48px;">
+        <div class="section-label">Platform Capabilities</div>
+        <h2>Everything you need for desktop automation</h2>
+        <p class="subtitle">From recording to AI-powered execution — one unified platform.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Recording &amp; Capture</div>
+        <div class="feat-list">
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Mouse Click Recording</strong><p>Records left/right/middle clicks with precise coordinates</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Keyboard Input</strong><p>Captures typed text, special keys, and clipboard operations</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Scroll &amp; Drag</strong><p>Scroll burst grouping with direction tracking, drag detection</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Modifier Variants</strong><p>Alt+click, Shift+click, Ctrl+click for flexible targeting</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Screenshot Capture</strong><p>Ephemeral base64-embedded screenshots for visual context</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">AI &amp; Intelligence</div>
+        <div class="feat-list">
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Ollama Engine</strong><p>Async API client with full model management</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>llama.cpp Engine</strong><p>Local GGUF model server with GPU acceleration</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Multimodal Vision</strong><p>Image analysis via LFM, minicpm-v vision-language models</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Context Database</strong><p>SQLite-backed persistent store for LLM context data</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Graph RAG Memory</strong><p>Temporal graph-based execution memory for agent workflows</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Computer Vision</strong><p>YOLO/ONNX object detection + PaddleOCR text extraction</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Workflow &amp; Execution</div>
+        <div class="feat-list">
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Visual Node Graph</strong><p>Drag-and-drop workflow editor with 14 node types</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Conditional Branching</strong><p>If/else logic based on OCR, CV match, or LLM decisions</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Human-like Execution</strong><p>Gaussian delays and Perlin noise mouse movement</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Scheduler</strong><p>Once, daily, weekly, interval execution modes</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>RDP Sandbox</strong><p>Isolated Windows sessions for background automation</p></div></div>
+          <div class="feat-item"><span class="feat-check">&#10003;</span><div><strong>Agent Mode</strong><p>Natural language interface with SmolLM3 chain routing</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Bundled AI Models</div>
+        <h2>Ready to run, zero configuration</h2>
+        <p class="subtitle">All models are downloaded and managed automatically.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Model</th><th>Size</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>SmolLM3-Q4_K_M</td><td>~1.9 GB</td><td>Chain routing, agent reasoning</td></tr>
+              <tr><td>LFM2.5-1.2B-Thinking</td><td>~1.2 GB</td><td>Advanced thinking &amp; reasoning</td></tr>
+              <tr><td>LFM2.5-VL-450M</td><td>~480 MB</td><td>Vision-language understanding</td></tr>
+              <tr><td>Computer Vision ONNX</td><td>~44 MB</td><td>YOLO object detection</td></tr>
+              <tr><td>PaddleOCR Bundle</td><td>Bundled</td><td>Text detection &amp; recognition</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <h2 style="margin-bottom:16px;">Ready to see it in action?</h2>
+        <div class="cta-row"><a href="/download" class="btn btn-primary">Download Arrow Free &rarr;</a></div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Arrow (formerly LoOper) &mdash; The On-Device Agent Creation &amp; Automation Platform<br />
+      <span class="footer-tagline">No cloud. No telemetry. No compromise.</span>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
