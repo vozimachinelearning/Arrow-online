@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="css/style.css" />
   <script>
     // Redirect clean URLs (e.g. /features -> /features.html) on GitHub Pages
+    // Works for both user sites (/) and project sites (/repo-name/)
     (function() {
       var path = window.location.pathname.replace(/\/$/, '');
       if (path && !path.includes('.')) {
         var knownPages = ['/features', '/pricing', '/download', '/docs', '/support', '/about', '/contact', '/home'];
-        if (knownPages.includes(path)) {
-          window.location.replace(path + '.html');
-          return;
+        // Check if path ends with a known page slug (works with or without repo prefix)
+        for (var i = 0; i < knownPages.length; i++) {
+          if (path.endsWith(knownPages[i])) {
+            window.location.replace(path + '.html');
+            return;
+          }
         }
       }
     })();
