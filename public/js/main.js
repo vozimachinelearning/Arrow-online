@@ -40,7 +40,14 @@
   });
 })();
 
-// ===== Contact Form (Backend API) =====
+// ===== Formspree Configuration =====
+// Replace these IDs with your Formspree form hash IDs.
+// Get them from https://formspree.io/forms (Integration tab -> "Your form's endpoint is")
+// e.g., if endpoint is https://formspree.io/f/abc123, the ID is "abc123"
+var FORMSPREE_CONTACT_ID = 'YOUR_CONTACT_FORM_ID';
+var FORMSPREE_SUBSCRIBE_ID = 'YOUR_SUBSCRIBE_FORM_ID';
+
+// ===== Contact Form (Formspree) =====
 (function () {
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
@@ -61,33 +68,37 @@
         return;
       }
 
+      if (FORMSPREE_CONTACT_ID === 'YOUR_CONTACT_FORM_ID') {
+        showFormMsg('Form not configured yet. Please email us at arrowlocalpower@gmail.com', 'error');
+        return;
+      }
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
       formMsg.style.display = 'none';
 
       try {
-        var payload = {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message
-        };
-
-        var response = await fetch('/api/contact', {
+        var response = await fetch('https://formspree.io/f/' + FORMSPREE_CONTACT_ID, {
           method: 'POST',
-          body: JSON.stringify(payload),
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+          }),
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
           }
         });
 
         var result = await response.json();
 
-        if (result.success) {
+        if (result.ok) {
           contactForm.style.display = 'none';
           formSuccess.style.display = 'block';
         } else {
-          throw new Error(result.message || 'Submission failed');
+          throw new Error(result.error || 'Submission failed');
         }
       } catch (err) {
         showFormMsg('Something went wrong. Please email us directly at arrowlocalpower@gmail.com', 'error');
@@ -189,32 +200,36 @@
         return;
       }
 
+      if (FORMSPREE_SUBSCRIBE_ID === 'YOUR_SUBSCRIBE_FORM_ID') {
+        alert('Subscription form not configured yet. Please email us at arrowlocalpower@gmail.com');
+        return;
+      }
+
       subBtn.disabled = true;
       subBtn.textContent = 'Sending...';
 
       try {
-        var payload = {
-          name: name,
-          email: email
-        };
-
-        var response = await fetch('/api/subscribe', {
+        var response = await fetch('https://formspree.io/f/' + FORMSPREE_SUBSCRIBE_ID, {
           method: 'POST',
-          body: JSON.stringify(payload),
+          body: JSON.stringify({
+            name: name,
+            email: email
+          }),
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
           }
         });
 
         var result = await response.json();
 
-        if (result.success) {
+        if (result.ok) {
           form.style.display = 'none';
           var successDiv = subSuccess;
           successDiv.querySelector('h3').textContent = 'Thanks, ' + name + '!';
           successDiv.style.display = 'block';
         } else {
-          throw new Error(result.message || 'Submission failed');
+          throw new Error(result.error || 'Submission failed');
         }
       } catch (err) {
         alert('Something went wrong. Please email us directly at arrowlocalpower@gmail.com');

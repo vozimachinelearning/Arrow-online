@@ -6,6 +6,19 @@
   <title>404 — Page Not Found | Arrow</title>
   <link rel="icon" href="img/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Redirect clean URLs (e.g. /features -> /features.html) on GitHub Pages
+    (function() {
+      var path = window.location.pathname.replace(/\/$/, '');
+      if (path && !path.includes('.')) {
+        var knownPages = ['/features', '/pricing', '/download', '/docs', '/support', '/about', '/contact', '/home'];
+        if (knownPages.includes(path)) {
+          window.location.replace(path + '.html');
+          return;
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="page" style="text-align:center;padding-top:120px;">
