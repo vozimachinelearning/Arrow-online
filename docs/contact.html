@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Arrow | Get in Touch</title>
+  <meta name="description" content="Contact Arrow: send us a message, reach the creator, or inquire about Enterprise plans." />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Arrow logo" />
+        <span>Arrow</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-tabs" id="navTabs">
+        <a href="/" class="tab-btn">Home</a>
+        <a href="/features" class="tab-btn">Features</a>
+        <a href="/pricing" class="tab-btn">Pricing</a>
+        <a href="/download" class="tab-btn">Download</a>
+        <a href="/docs" class="tab-btn">Docs</a>
+        <a href="/support" class="tab-btn">Support</a>
+        <a href="/about" class="tab-btn">About</a>
+        <a href="/contact" class="tab-btn active">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Contact Content -->
+    <div id="tab-contact" class="tab-content active">
+      <section class="section" style="border-top:none;padding-top:48px;">
+        <div class="section-label">Get in Touch</div>
+        <h2>We'd love to hear from you</h2>
+        <p class="subtitle">Questions, enterprise inquiries, or feedback — reach out any time.</p>
+      </section>
+
+      <section class="section">
+        <div class="contact-grid">
+          <div>
+            <h3>Send us a message</h3>
+            <form class="contact-form" id="contactForm">
+              <input type="hidden" name="_subject" value="[Arrow Contact] New message">
+              <input type="hidden" name="form_type" value="contact">
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <select id="contactSubject" name="subject" class="form-input">
+                  <option value="general">General Inquiry</option>
+                  <option value="sales">Enterprise Sales</option>
+                  <option value="support">Technical Support</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" class="form-input" rows="5" placeholder="How can we help?" required></textarea>
+              </div>
+              <div id="contactFormMsg" style="display:none;padding:14px 16px;border-radius:8px;margin-bottom:16px;text-align:center;"></div>
+              <button type="submit" class="btn btn-primary" id="contactSubmitBtn">Send Message &rarr;</button>
+            </form>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <h3>Message Sent!</h3>
+              <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+          <div>
+            <h3>Contact & Creator</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div><strong>Email</strong><p><a href="mailto:arrowlocalpower@gmail.com">arrowlocalpower@gmail.com</a></p></div>
+              </div>
+              <div class="contact-item">
+                <div><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/in/rodrigo-benitez-9184aa214/" target="_blank" rel="noopener">linkedin.com/in/rodrigo-benitez-9184aa214</a></p></div>
+              </div>
+              <div class="contact-item">
+                <div><strong>Discord</strong><p><a href="https://discord.gg/znfXBSQbP" target="_blank" rel="noopener">Join the Arrow Community &rarr;</a></p></div>
+              </div>
+              <div class="contact-item">
+                <div><strong>About the Creator</strong><p>Arrow was built by <strong>Rodrigo Benitez</strong>, a software developer with deep expertise in decentralized software architecture, local AI inference for GPU-less devices, and edge computing. His vision is to make intelligent automation accessible to everyone — regardless of their hardware — while preserving data sovereignty through offline-first design.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Enterprise Support</div>
+        <h2>Dedicated support for organizations</h2>
+        <p class="subtitle">Enterprise customers receive priority access to our engineering team.</p>
+        <div class="grid grid-wide">
+          <div class="card support-card">
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock access to our engineering team with guaranteed response times.</p>
+          </div>
+          <div class="card support-card">
+            <h3>Custom Integration</h3>
+            <p>Tailored solutions for your organization's specific automation requirements.</p>
+          </div>
+          <div class="card support-card">
+            <h3>SLA Guarantees</h3>
+            <p>Service Level Agreements ensuring reliability and uptime for mission-critical automations.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Arrow (formerly LoOper) &mdash; The On-Device Agent Creation &amp; Automation Platform<br />
+      <span class="footer-tagline">No cloud. No telemetry. No compromise.</span>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

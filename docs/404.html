@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Arrow</title>
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Redirect clean URLs (e.g. /features -> /features.html) on GitHub Pages
+    (function() {
+      var path = window.location.pathname.replace(/\/$/, '');
+      if (path && !path.includes('.')) {
+        var knownPages = ['/features', '/pricing', '/download', '/docs', '/support', '/about', '/contact', '/home'];
+        if (knownPages.includes(path)) {
+          window.location.replace(path + '.html');
+          return;
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="page" style="text-align:center;padding-top:120px;">
+    <div style="font-size:72px;font-weight:800;color:var(--main);margin-bottom:8px;">404</div>
+    <h1 style="margin-bottom:12px;">Page not found</h1>
+    <p style="color:var(--text-secondary);margin-bottom:32px;">The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/" class="btn btn-primary">Go Home &rarr;</a>
+  </div>
+</body>
+</html>
